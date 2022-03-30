@@ -1,13 +1,12 @@
-import classes from "./Input.module.css";
-import React from 'react' ; 
+import React from 'react';
+
+import classes from './Input.module.css';
 
 const Input = React.forwardRef((props, ref) => {
   return (
     <div className={classes.input}>
       <label htmlFor={props.input.id}>{props.label}</label>
-      {/* we can use this trick for adding input props 
-      this is highly configuratble way to add props automatically  */}
-      <input {...props.input} ref={ref}/>
+      <input ref={ref} {...props.input} />
     </div>
   );
 });
